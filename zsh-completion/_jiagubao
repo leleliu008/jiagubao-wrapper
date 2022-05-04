@@ -1,4 +1,4 @@
-#compdef 360jiagubao
+#compdef jiagubao
 
 _commands=(
     '-help:显示帮助信息.'
@@ -18,16 +18,16 @@ _commands=(
     '-importmulpkg:导入多渠道配置信息（txt格式）'
 )
 
-function _360jiagubao_commands() {
+function _jiagubao_commands() {
     _describe 'command' _commands
 }
 
-function _360jiagubao() {
+function _jiagubao() {
     local context state state_descr line
     typeset -A opt_args
 
     _arguments \
-        '1: :_360jiagubao_commands' \
+        '1: :_jiagubao_commands' \
         '*:: :->option'
 
     case $state in
@@ -70,4 +70,4 @@ function _360jiagubao() {
     esac
 }
 
-_360jiagubao "$@"
+_jiagubao "$@"
